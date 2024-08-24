@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const addBook = require("../controllers/book/addBook");
-const {getBooksBrief, getBookDetails} = require("../controllers/book/getBook");
+const {getBooksBrief, getBookDetails, getRecommendedBooks} = require("../controllers/book/getBook");
 const configureUploadMiddleware = require("../middlewares/fileUpload");
 const validateToken = require("../middlewares/validateToken");
 
@@ -27,7 +27,8 @@ const uploadFiles = configureUploadMiddleware({
 
 // Create api routes
 router.post("/addBook", uploadFiles, validateToken, addBook);
-router.get("/get-books-brief", validateToken, getBooksBrief);
+router.get("/get-books-brief", getBooksBrief);
+router.get("/get-recommended-books", getRecommendedBooks);
 router.get("/get-book-details/:bookId", validateToken, getBookDetails);
 
 module.exports = router;
