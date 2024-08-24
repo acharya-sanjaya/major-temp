@@ -1,0 +1,12 @@
+[
+  {"name": "ACTION"},
+  {"name": "Thriller"},
+  {"name": "Mystery"},
+  {"name": "Romance"},
+  {"name": "Science Fiction"},
+  {"name": "Fantasy"},
+  {"name": "Historical Fiction"},
+  {"name": "Non-Fiction"},
+  {"name": "Horror"},
+  {"name": "Literature"}
+]
