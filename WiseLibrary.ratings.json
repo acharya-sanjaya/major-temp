@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "66c948f27c972a73df35b2c6"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 3,
+  "review": null,
+  "createdAt": {
+    "$date": "2024-08-24T02:44:02.095Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T02:44:02.095Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c949097c972a73df35b2cc"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 4,
+  "review": null,
+  "createdAt": {
+    "$date": "2024-08-24T02:44:25.951Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T02:44:25.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c949137c972a73df35b2d2"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 4,
+  "review": "Great Book",
+  "createdAt": {
+    "$date": "2024-08-24T02:44:35.626Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T02:44:35.626Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7a50c5283bdbb28aeb0e"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 1,
+  "review": "This is a worst book",
+  "createdAt": {
+    "$date": "2024-08-25T00:26:56.904Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:26:56.904Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7c17c5283bdbb28aeb75"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 3,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:34:31.844Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:34:31.844Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7eb2ab6b86e1d91721ea"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 5,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:45:38.405Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:45:38.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7ebbab6b86e1d91721fa"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 5,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:45:47.225Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:45:47.225Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7ed0ab6b86e1d917220a"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 1,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:46:08.571Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:46:08.571Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7ed4ab6b86e1d9172210"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 2,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:46:12.980Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:46:12.980Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca7f16ab6b86e1d9172220"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 2,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T00:47:18.521Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T00:47:18.521Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66caa3b315d7db180469f6d9"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "bookId": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "star": 2,
+  "review": "",
+  "createdAt": {
+    "$date": "2024-08-25T03:23:31.720Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T03:23:31.720Z"
+  },
+  "__v": 0
+}]

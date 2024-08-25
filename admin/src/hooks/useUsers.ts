@@ -1,95 +1,74 @@
-import {useState, useRef} from "react";
-import {UserType, UsersData} from "../utils/data";
-import useFilter from "./useFilter";
+import { useState, useEffect } from "react";
+import useFetch from "./useFetch";
+import api from "../utils/api";
+
+export type UserType = {
+    _id: string;
+    email: string;
+    fullName: string;
+    profileImageUrl: string;
+    role: "reader" | "author" | "admin";
+    proExpiry: Date | null;
+    isActive: boolean;
+    balance: number;
+};
 
 const useUsers = () => {
-  const [filteredUsers, setFilteredUsers] = useState<UserType[]>(UsersData);
-  const [selectedRows, setSelectedRows] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const originalData = useRef<UserType[]>(UsersData);
-
-  const handleSearch = (searchKey: string) => {
-    const filteredData = useFilter(originalData.current ?? [], searchKey);
-    setFilteredUsers(filteredData as UserType[]);
-  };
-
-  const handleSelectAll = (isSelected: boolean) => {
-    if (isSelected) {
-      const allIds = filteredUsers.map((user) => user.userId);
-      setSelectedRows(allIds);
-    } else {
-      setSelectedRows([]);
-    }
-  };
-
-  const handleSelectRow = (id: string) => {
-    setSelectedRows((prev) =>
-      prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
+    const {
+        fetchedData: users,
+        loading,
+        error,
+    } = useFetch<UserType[]>(api.getAllUsers, []);
+    const [filteredUsers, setFilteredUsers] = useState<UserType[]>(users);
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [activeRole, setActiveRole] = useState<"all" | "reader" | "author">(
+        "all"
     );
-  };
 
-  const handleSuspension = (id: string) => {
-    const updatedUsers = filteredUsers.map((user) =>
-      user.userId === id ? {...user, status: "suspended" as const} : user
-    );
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-  };
+    useEffect(() => {
+        if (users.length > 0) {
+            applyFilters();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeRole, searchTerm, users]);
 
-  const handleRemoveSuspension = (id: string) => {
-    const updatedUsers = filteredUsers.map((user) =>
-      user.userId === id ? {...user, status: "active" as const} : user
-    );
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-  };
+    const applyFilters = () => {
+        let filteredData = users;
 
-  const handleRemove = (id: string) => {
-    const updatedUsers = filteredUsers.filter((user) => user.userId !== id);
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-  };
+        if (activeRole !== "all") {
+            filteredData = filteredData.filter(
+                (user) => user.role.toLowerCase() === activeRole
+            );
+        }
 
-  const handleSuspensionSelected = () => {
-    const updatedUsers = filteredUsers.map((user) =>
-      selectedRows.includes(user.userId) ? {...user, status: "suspended" as const} : user
-    );
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-    setSelectedRows([]);
-  };
+        if (searchTerm) {
+            filteredData = filteredData.filter(
+                (user) =>
+                    user._id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    user.fullName
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()) ||
+                    user.email
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()) ||
+                    user.isActive.toString().includes(searchTerm.toLowerCase())
+            );
+        }
+        setFilteredUsers(filteredData);
+    };
 
-  const handleRemoveSuspensionSelected = () => {
-    const updatedUsers = filteredUsers.map((user) =>
-      selectedRows.includes(user.userId) ? {...user, status: "active" as const} : user
-    );
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-    setSelectedRows([]);
-  };
+    const handleSearch = (searchKey: string) => {
+        setSearchTerm(searchKey);
+    };
 
-  const handleRemoveSelected = () => {
-    const updatedUsers = filteredUsers.filter((user) => !selectedRows.includes(user.userId));
-    setFilteredUsers(updatedUsers);
-    originalData.current = updatedUsers;
-    setSelectedRows([]);
-  };
-
-  return {
-    Users: filteredUsers,
-    selectedRows,
-    searchTerm,
-    setSearchTerm,
-    handleSearch,
-    handleSelectAll,
-    handleSelectRow,
-    handleSuspension,
-    handleRemoveSuspension,
-    handleRemove,
-    handleSuspensionSelected,
-    handleRemoveSuspensionSelected,
-    handleRemoveSelected,
-  };
+    return {
+        users: filteredUsers,
+        activeRole,
+        loading,
+        error,
+        handleSearch,
+        setActiveRole,
+    };
 };
 
 export default useUsers;

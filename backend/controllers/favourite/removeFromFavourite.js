@@ -7,9 +7,9 @@ const removeFromFavourite = async (req, res) => {
 
   try {
     // Check if the user is a reader
-    if (req.user.role !== "reader") {
-      return res.status(403).json({message: "Only readers can remove books from favorites"});
-    }
+    // if (req.user.role !== "reader") {
+    //   return res.status(403).json({message: "Only readers can remove books from favorites"});
+    // }
 
     // Find the book by ID
     const book = await Book.findById(bookId);

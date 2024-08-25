@@ -2,13 +2,16 @@ const Reservation = require("../../models/reservation.js");
 
 const getAllReservations = async (req, res) => {
   try {
-    // Ensure only admins can access this route
-    if (req.user.role !== "admin") {
-      return res.status(403).json({message: "Access denied. Admins only."});
-    }
+    // // Ensure only admins can access this route
+    // if (req.user.role !== "admin") {
+    //   return res.status(403).json({message: "Access denied. Admins only."});
+    // }
 
     // Find all reservations in the system
-    const reservations = await Reservation.find().populate("userId").populate("bookId");
+    const reservations = await Reservation.find()
+      .populate("userId")
+      .populate("bookId")
+      .sort({createdAt: -1});
 
     if (!reservations.length) {
       return res.status(404).json({message: "No reservations found"});
@@ -27,7 +30,7 @@ const getAllReservations = async (req, res) => {
       dueDate: reservation.dueDate,
     }));
 
-    res.status(200).json({reservationsList});
+    res.status(200).json(reservationsList);
   } catch (error) {
     res.status(500).json({message: "Server error", error: error.message});
   }
@@ -57,7 +60,7 @@ const getReservationByUserId = async (req, res) => {
       dueDate: reservation.dueDate,
     }));
 
-    res.status(200).json({reservationsList});
+    res.status(200).json(reservationsList);
   } catch (error) {
     res.status(500).json({message: "Server error", error: error.message});
   }
@@ -86,7 +89,7 @@ const getReservationByBookId = async (req, res) => {
       dueDate: reservation.dueDate,
     }));
 
-    res.status(200).json({reservationsList});
+    res.status(200).json(reservationsList);
   } catch (error) {
     res.status(500).json({message: "Server error", error: error.message});
   }
@@ -105,18 +108,16 @@ const getReservationByReservationId = async (req, res) => {
     }
 
     res.status(200).json({
-      reservation: {
-        reservationId,
-        userId: reservation.userId._id,
-        userName: reservation.userId.fullName,
-        bookId: reservation.bookId._id,
-        bookTitle: reservation.bookId.title,
-        coverImage: reservation.bookId.coverImage,
-        reservedQuantity: reservation.quantity,
-        status: reservation.status,
-        reservedDate: reservation.createdAt,
-        dueDate: reservation.dueDate,
-      },
+      reservationId,
+      userId: reservation.userId._id,
+      userName: reservation.userId.fullName,
+      bookId: reservation.bookId._id,
+      bookTitle: reservation.bookId.title,
+      coverImage: reservation.bookId.coverImage,
+      reservedQuantity: reservation.quantity,
+      status: reservation.status,
+      reservedDate: reservation.createdAt,
+      dueDate: reservation.dueDate,
     });
   } catch (error) {
     res.status(500).json({message: "Server error", error: error.message});

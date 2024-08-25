@@ -1,83 +1,146 @@
-import {useState, useRef} from "react";
-import {ReservationType, ReservationsData} from "../utils/data";
-import useFilter from "./useFilter";
+import { useState, useEffect, useCallback } from "react";
+import api, { fetchWithToken } from "../utils/api";
+
+// Define types for reservations
+interface Reservation {
+    reservationId: string;
+    userId: string;
+    userName: string;
+    bookId: string;
+    bookTitle: string;
+    coverImage: string;
+    reservedQuantity: number;
+    status: "pending" | "approved" | "rejected";
+    reservedDate: string;
+    dueDate: string;
+}
 
 const useReservations = () => {
-  const [filteredReservations, setFilteredReservations] =
-    useState<ReservationType[]>(ReservationsData);
-  const [selectedRows, setSelectedRows] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const originalData = useRef<ReservationType[]>(ReservationsData);
+    const [reservations, setReservations] = useState<Reservation[]>([]);
+    const [searchText, setSearchText] = useState<string>("");
 
-  const handleSearch = (searchKey: string) => {
-    const filteredData = useFilter(originalData.current ?? [], searchKey);
-    setFilteredReservations(filteredData as ReservationType[]);
-  };
+    // Fetch reservations from the API
+    const fetchReservations = useCallback(async () => {
+        try {
+            const data = await fetchWithToken(api.getAllReservations, "GET");
+            setReservations(data || []); // Fallback to an empty array if undefined
+        } catch (error) {
+            console.error("Error fetching reservations:", error);
+        }
+    }, []);
 
-  const handleSelectAll = (isSelected: boolean) => {
-    if (isSelected) {
-      const allIds = filteredReservations.map((reservation) => reservation.reservationId);
-      setSelectedRows(allIds);
-    } else {
-      setSelectedRows([]);
-    }
-  };
+    useEffect(() => {
+        fetchReservations();
+    }, [fetchReservations]);
 
-  const handleSelectRow = (id: string) => {
-    setSelectedRows((prev) =>
-      prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
-    );
-  };
+    // Search handler
+    const handleSearch = (text: string) => {
+        setSearchText(text.toLowerCase());
+    };
 
-  const handleApprove = (id: string) => {
-    const updatedReservations = filteredReservations.map((reservation) =>
-      reservation.reservationId === id ? {...reservation, approved: true} : reservation
-    );
-    setFilteredReservations(updatedReservations);
-    originalData.current = updatedReservations;
-  };
+    // Filter reservations based on search text
+    const filteredReservations =
+        reservations?.filter((reservation) =>
+            [
+                reservation.userName,
+                reservation.bookTitle,
+                reservation.reservationId,
+                reservation.status,
+            ].some((field) => field.toLowerCase().includes(searchText))
+        ) || []; // Fallback to an empty array if undefined
 
-  const handleRemove = (id: string) => {
-    const updatedReservations = filteredReservations.filter(
-      (reservation) => reservation.reservationId !== id
-    );
-    setFilteredReservations(updatedReservations);
-    originalData.current = updatedReservations;
-  };
+    // Approve a reservation
+    const handleApprove = async (reservationId: string) => {
+        try {
+            await fetchWithToken(
+                api.updateReservationStatus(reservationId),
+                "PATCH",
+                { status: "approved" }
+            );
+            setReservations((prevReservations) =>
+                prevReservations.map((reservation) =>
+                    reservation.reservationId === reservationId
+                        ? { ...reservation, status: "approved" }
+                        : reservation
+                )
+            );
+        } catch (error) {
+            console.error("Error approving reservation:", error);
+        }
+    };
 
-  const handleApproveSelected = () => {
-    const updatedReservations = filteredReservations.map((reservation) =>
-      selectedRows.includes(reservation.reservationId)
-        ? {...reservation, approved: true}
-        : reservation
-    );
-    setFilteredReservations(updatedReservations);
-    originalData.current = updatedReservations;
-    setSelectedRows([]);
-  };
+    // Reject a reservation
+    const handleReject = async (reservationId: string) => {
+        try {
+            await fetchWithToken(
+                api.updateReservationStatus(reservationId),
+                "PATCH",
+                { status: "rejected" }
+            );
+            setReservations((prevReservations) =>
+                prevReservations.map((reservation) =>
+                    reservation.reservationId === reservationId
+                        ? { ...reservation, status: "rejected" }
+                        : reservation
+                )
+            );
+        } catch (error) {
+            console.error("Error rejecting reservation:", error);
+        }
+    };
 
-  const handleRemoveSelected = () => {
-    const updatedReservations = filteredReservations.filter(
-      (reservation) => !selectedRows.includes(reservation.reservationId)
-    );
-    setFilteredReservations(updatedReservations);
-    originalData.current = updatedReservations;
-    setSelectedRows([]);
-  };
+    // Approve selected reservations
+    const handleApproveSelected = async (selectedIds: string[]) => {
+        try {
+            await Promise.all(
+                selectedIds.map((id) =>
+                    fetchWithToken(api.updateReservationStatus(id), "PATCH", {
+                        status: "approved",
+                    })
+                )
+            );
+            setReservations((prevReservations) =>
+                prevReservations.map((reservation) =>
+                    selectedIds.includes(reservation.reservationId)
+                        ? { ...reservation, status: "approved" }
+                        : reservation
+                )
+            );
+        } catch (error) {
+            console.error("Error approving selected reservations:", error);
+        }
+    };
 
-  return {
-    reservations: filteredReservations,
-    selectedRows,
-    searchTerm,
-    setSearchTerm,
-    handleSearch,
-    handleSelectAll,
-    handleSelectRow,
-    handleApprove,
-    handleRemove,
-    handleApproveSelected,
-    handleRemoveSelected,
-  };
+    // Reject selected reservations
+    const handleRejectSelected = async (selectedIds: string[]) => {
+        try {
+            await Promise.all(
+                selectedIds.map((id) =>
+                    fetchWithToken(api.updateReservationStatus(id), "PATCH", {
+                        status: "rejected",
+                    })
+                )
+            );
+            setReservations((prevReservations) =>
+                prevReservations.map((reservation) =>
+                    selectedIds.includes(reservation.reservationId)
+                        ? { ...reservation, status: "rejected" }
+                        : reservation
+                )
+            );
+        } catch (error) {
+            console.error("Error rejecting selected reservations:", error);
+        }
+    };
+
+    return {
+        reservations: filteredReservations,
+        handleSearch,
+        handleApprove,
+        handleReject,
+        handleApproveSelected,
+        handleRejectSelected,
+    };
 };
 
 export default useReservations;

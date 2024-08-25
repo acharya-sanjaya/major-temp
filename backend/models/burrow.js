@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const borrowSchema = new Schema(
+const burrowSchema = new Schema(
   {
     userId: {
       type: Schema.Types.ObjectId,
@@ -27,5 +27,5 @@ const borrowSchema = new Schema(
   }
 );
 
-const Borrow = mongoose.model("Borrow", borrowSchema);
-module.exports = Borrow;
+const Burrow = mongoose.model("Burrow", burrowSchema);
+module.exports = Burrow;

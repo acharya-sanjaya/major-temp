@@ -1,9 +1,11 @@
 const Reservation = require("../../models/reservation.js");
 const Book = require("../../models/book.js");
+const Burrow = require("../../models/burrow.js"); // Import Burrow model
 
 const updateStatus = async (req, res) => {
   const userId = req.user.id;
-  const {reservationId, status} = req.body;
+  const {status} = req.body;
+  const {reservationId} = req.params;
 
   try {
     // Find the reservation by ID
@@ -27,7 +29,7 @@ const updateStatus = async (req, res) => {
       return res.status(403).json({message: "Reservation is already processed"});
     }
 
-    if (book.stock < reservation.quantity) {
+    if (book.stock < reservation.quantity && status === "approved") {
       return res.status(400).json({message: "Not enough stock available"});
     }
 
@@ -39,6 +41,14 @@ const updateStatus = async (req, res) => {
     if (status === "approved") {
       book.stock -= reservation.quantity;
       await book.save();
+
+      // Create a burrow record
+      const burrow = new Burrow({
+        userId: reservation.userId,
+        bookId: reservation.bookId,
+        dueDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // Set due date (e.g., 1 week from now)
+      });
+      await burrow.save();
     }
 
     res.status(200).json({message: "Reservation updated successfully", reservation});

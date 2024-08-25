@@ -3,13 +3,14 @@ const Book = require("../../models/book.js");
 
 const reserveBook = async (req, res) => {
   const userId = req.user.id;
-  const {bookId, dueDate, quantity} = req.body;
+  const {quantity} = req.body;
+  const {bookId} = req.params;
 
   try {
     // Check if the user is a reader
-    if (req.user.role !== "reader") {
-      return res.status(403).json({message: "Only readers can reserve books"});
-    }
+    // if (req.user.role !== "reader") {
+    //   return res.status(403).json({message: "Only readers can reserve books"});
+    // }
 
     // Find the book by ID
     const book = await Book.findById(bookId);
@@ -30,7 +31,6 @@ const reserveBook = async (req, res) => {
     const reservation = new Reservation({
       userId,
       bookId,
-      dueDate,
       quantity,
       status: "pending",
     });

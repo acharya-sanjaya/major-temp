@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d61"
+  },
+  "name": "ACTION"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d62"
+  },
+  "name": "FICTION"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d63"
+  },
+  "name": "DRAMA"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d64"
+  },
+  "name": "HORROR"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d65"
+  },
+  "name": "THRILLER"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d66"
+  },
+  "name": "MYSTERY"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d67"
+  },
+  "name": "ROMANCE"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d68"
+  },
+  "name": "SCIENCE FICTION"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d69"
+  },
+  "name": "FANTASY"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d6a"
+  },
+  "name": "HISTORICAL FICTION"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d6b"
+  },
+  "name": "NON-FICTION"
+},
+{
+  "_id": {
+    "$oid": "66c869a6a8c179a900e98d6d"
+  },
+  "name": "LITERATURE"
+}]

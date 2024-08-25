@@ -28,7 +28,7 @@ const uploadFiles = configureUploadMiddleware({
 // Create api routes
 router.post("/addBook", uploadFiles, validateToken, addBook);
 router.get("/get-books-brief", getBooksBrief);
-router.get("/get-recommended-books", getRecommendedBooks);
+router.post("/get-recommended-books", getRecommendedBooks);
 router.get("/get-book-details/:bookId", validateToken, getBookDetails);
 
 module.exports = router;

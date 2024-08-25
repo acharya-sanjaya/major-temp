@@ -1,0 +1,259 @@
+[{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d71"
+  },
+  "email": "reader1@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Reader1",
+  "profileImageUrl": "uploads/profile-image/reader1.jpg",
+  "role": "reader",
+  "proExpiry": null,
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T22:09:12.310Z"
+  },
+  "balance": 1000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d72"
+  },
+  "email": "reader2@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Reader2",
+  "profileImageUrl": "uploads/profile-image/reader2.jpg",
+  "role": "reader",
+  "proExpiry": "2024-09-19T01:03:25.959Z",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T17:42:57.479Z"
+  },
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d73"
+  },
+  "email": "reader3@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Reader3",
+  "profileImageUrl": "uploads/profile-image/reader3.jpg",
+  "role": "reader",
+  "proExpiry": "2024-09-19T01:03:25.959Z",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T17:32:26.520Z"
+  },
+  "balance": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d74"
+  },
+  "email": "reader4@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Reader4",
+  "profileImageUrl": "uploads/profile-image/reader4.jpg",
+  "role": "reader",
+  "proExpiry": "2024-09-19T01:03:25.959Z",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T16:55:29.612Z"
+  },
+  "balance": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d75"
+  },
+  "email": "reader5@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Reader5",
+  "profileImageUrl": "uploads/profile-image/reader5.jpg",
+  "role": "reader",
+  "proExpiry": "2024-09-19T01:03:25.959Z",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d76"
+  },
+  "email": "author1@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Author1",
+  "profileImageUrl": "uploads/profile-image/author1.jpg",
+  "role": "author",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d77"
+  },
+  "email": "author2@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Author2",
+  "profileImageUrl": "uploads/profile-image/author2.jpg",
+  "role": "author",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d78"
+  },
+  "email": "author3@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Author3",
+  "profileImageUrl": "uploads/profile-image/author3.jpg",
+  "role": "author",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d79"
+  },
+  "email": "author4@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Author4",
+  "profileImageUrl": "uploads/profile-image/author4.jpg",
+  "role": "author",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T18:12:16.699Z"
+  },
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7a"
+  },
+  "email": "author5@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Author5",
+  "profileImageUrl": "uploads/profile-image/author5.jpg",
+  "role": "author",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T18:12:18.549Z"
+  },
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "email": "admin1@gmail.com",
+  "password": "$2a$10$4Hxv5KH6T5RuMCcLv/2TzuWCDThQtmOig6rjbjLSEQQM6WazuBZ2i",
+  "fullName": "Admin1",
+  "profileImageUrl": "uploads/profile-image/admin1.jpg",
+  "role": "admin",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": {
+    "$date": "2024-08-24T22:13:40.497Z"
+  },
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7c"
+  },
+  "email": "admin2@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Admin2",
+  "profileImageUrl": "uploads/profile-image/admin2.jpg",
+  "role": "admin",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7d"
+  },
+  "email": "admin3@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Admin3",
+  "profileImageUrl": "uploads/profile-image/admin3.jpg",
+  "role": "admin",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7e"
+  },
+  "email": "admin4@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Admin4",
+  "profileImageUrl": "uploads/profile-image/admin4.jpg",
+  "role": "admin",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c86c3da8c179a900e98d7f"
+  },
+  "email": "admin5@gmail.com",
+  "password": "$2a$10$RrnbvBBZx.0IFHBdCK4FiODsgUkRQsgyr3s9VzcoYmHpRxZp52HTi",
+  "fullName": "Admin5",
+  "profileImageUrl": "uploads/profile-image/admin5.jpg",
+  "role": "admin",
+  "isActive": true,
+  "remarks": null,
+  "createdAt": "2024-08-17T06:10:27.350Z",
+  "updatedAt": "2024-08-17T06:10:27.350Z",
+  "balance": 0,
+  "__v": 0
+}]

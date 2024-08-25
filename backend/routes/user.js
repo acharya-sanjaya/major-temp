@@ -9,6 +9,7 @@ const {addMembership, removeMembership} = require("../controllers/user/changeMem
 const {suspendUser, removeSuspension} = require("../controllers/user/suspension.js");
 const changeFullName = require("../controllers/user/changeFullName.js");
 const addBalance = require("../controllers/user/addBalance.js");
+const {getAllUsers, getUserById, getUserByRole} = require("../controllers/user/getUser.js");
 
 const router = express.Router();
 
@@ -60,16 +61,22 @@ router.post("/login-admin", loginWithRole("admin"));
 router.post("/login-author", loginWithRole("author"));
 router.post("/login-reader", loginWithRole("reader"));
 
+// Get user
+router.get("/get-all-users", getAllUsers);
+router.get("/get-user-by-id/:userId", getUserById);
+router.get("/get-user-by-role/:role", getUserByRole);
+
 // Update user profile
 router.patch("/change-fullname", validateToken, changeFullName);
 router.patch("/change-password", validateToken, changePassword);
 router.patch("/change-profile-image", validateToken, uploadProfileImage, changeProfileImage);
+
 router.patch("/add-membership", validateToken, addMembership);
 router.patch("/remove-membership", validateToken, removeMembership);
 
 // Suspension
-router.patch("/suspend-user", validateToken, suspendUser);
-router.patch("/remove-suspension", validateToken, removeSuspension);
+router.patch("/suspend-user/:userId", validateToken, suspendUser);
+router.patch("/remove-suspension/:userId", validateToken, removeSuspension);
 
 // Balance
 router.patch("/add-balance", validateToken, addBalance);

@@ -4,8 +4,8 @@ import Button from "../../components/ui/Button";
 import { toast } from "react-toastify";
 import RenderPdf from "../../components/ui/RenderPdf";
 import useFetch from "../../hooks/useFetch";
-import api from "../../utils/api";
 import Ratings from "../../components/Ratings";
+import api, { fetchWithToken } from "../../utils/api";
 import usePreference from "../../hooks/usePreference";
 
 interface BookType {
@@ -33,6 +33,32 @@ const BookDescription = () => {
     const [readOnline, setReadOnline] = useState(false);
     const { addPreference } = usePreference();
 
+    const handleBorrow = async () => {
+        try {
+            // Ensure bookId is defined
+            if (!bookId) throw new Error("Book ID is not defined");
+
+            await fetchWithToken(api.createReservation(bookId), "POST", {
+                bookId: bookDetails?._id,
+                quantity: 1, // assuming quantity of 1 for now
+            });
+
+            // Assuming successful reservation if no error is thrown
+            toast.success("Reservation Made for #" + bookDetails?._id);
+
+            // Add to preference after successful reservation
+            addPreference(
+                bookDetails?.genre || "",
+                bookDetails?.authorId || "",
+                1 // score
+            );
+        } catch (error) {
+            // Handle error properly
+            toast.error(
+                "Failed to make reservation. " + (error as Error).message
+            );
+        }
+    };
     // If data is loading or an error occurred, handle it appropriately
     if (loading) return <div>Loading...</div>;
     if (error)
@@ -45,6 +71,7 @@ const BookDescription = () => {
         );
 
     if (!bookDetails) return <div>Book not found</div>;
+
     return (
         <div>
             <div className="flex flex-col md:flex-row p-4 items-center gap-4">
@@ -80,11 +107,7 @@ const BookDescription = () => {
                             }
                         />
                         <Button
-                            onClick={() => {
-                                toast.success(
-                                    "Reservation Made for #" + bookDetails._id
-                                );
-                            }}
+                            onClick={handleBorrow}
                             label="Borrow Hardcopy"
                             variant={
                                 bookDetails.stock > 1

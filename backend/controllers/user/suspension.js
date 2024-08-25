@@ -2,10 +2,10 @@ const User = require("../../models/user");
 
 // Suspend the user
 const suspendUser = async (req, res) => {
-  const {userId} = req.body;
+  const {userId} = req.params;
   try {
-    // Check if the user has the admin role
-    if (req.user.role !== "reader") {
+    // Check if the user is reader
+    if (req.user.role === "reader") {
       return res.status(403).json({message: "Only the admin can suspend users"});
     }
 
@@ -33,7 +33,12 @@ const suspendUser = async (req, res) => {
 
 // Remove suspension
 const removeSuspension = async (req, res) => {
-  const {userId} = req.body;
+  // Check if the user is reader
+  if (req.user.role === "reader") {
+    return res.status(403).json({message: "Only the admin can remove suspensions"});
+  }
+
+  const {userId} = req.params;
   try {
     const user = await User.findById(userId);
     if (!user) {

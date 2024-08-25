@@ -22,10 +22,9 @@ const paymentSchema = new Schema(
       enum: ["pending", "completed", "failed"],
       default: "pending",
     },
-    transactionId: {
+    description: {
       type: String,
-      required: true,
-      unique: true,
+      default: "-",
     },
     paymentDate: {
       type: Date,

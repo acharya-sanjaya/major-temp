@@ -3,6 +3,10 @@ const userRoutes = require("./routes/user.js");
 const bookRoutes = require("./routes/book.js");
 const genreRoutes = require("./routes/genre.js");
 const ratingRoutes = require("./routes/rating.js");
+const reservationRoutes = require("./routes/reservation.js");
+const burrowRoutes = require("./routes/burrow.js");
+const paymentRoutes = require("./routes/payment.js");
+const favouriteRoutes = require("./routes/favourite.js");
 
 const express = require("express");
 const cors = require("cors");
@@ -34,8 +38,12 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Enable routes for the account API
 app.use("/api/user", userRoutes);
 app.use("/api/book", bookRoutes);
+app.use("/api/reservation", reservationRoutes);
+app.use("/api/burrow", burrowRoutes);
 app.use("/api/genre", genreRoutes);
 app.use("/api/rating", ratingRoutes);
+app.use("/api/favourite", favouriteRoutes);
+app.use("/api/payment", paymentRoutes);
 
 console.clear();
 

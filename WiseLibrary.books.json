@@ -1,0 +1,625 @@
+[{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d81"
+  },
+  "isbn": "ISBN_0001",
+  "title": "Book 0001",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "ACTION",
+  "description": "Description for Book 0001",
+  "isPremium": false,
+  "stock": 29,
+  "avgRating": 2.9,
+  "ratingsCount": 11,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book1.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book1.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": {
+    "$date": "2024-08-25T03:23:31.724Z"
+  },
+  "__v": 0,
+  "suspended": false
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d82"
+  },
+  "isbn": "ISBN_0002",
+  "title": "Book 0002",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "ACTION",
+  "description": "Description for Book 0002",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book2.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book2.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d83"
+  },
+  "isbn": "ISBN_0003",
+  "title": "Book 0003",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "ACTION",
+  "description": "Description for Book 0003",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book3.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book3.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d84"
+  },
+  "isbn": "ISBN_0004",
+  "title": "Book 0004",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "FICTION",
+  "description": "Description for Book 0004",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book4.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book4.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d85"
+  },
+  "isbn": "ISBN_0005",
+  "title": "Book 0005",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "FICTION",
+  "description": "Description for Book 0005",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book5.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book5.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d86"
+  },
+  "isbn": "ISBN_0006",
+  "title": "Book 0006",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "FICTION",
+  "description": "Description for Book 0006",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book6.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book6.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d87"
+  },
+  "isbn": "ISBN_0007",
+  "title": "Book 0007",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "DRAMA",
+  "description": "Description for Book 0007",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book7.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book7.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d88"
+  },
+  "isbn": "ISBN_0008",
+  "title": "Book 0008",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "DRAMA",
+  "description": "Description for Book 0008",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book8.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book8.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d89"
+  },
+  "isbn": "ISBN_0009",
+  "title": "Book 0009",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "DRAMA",
+  "description": "Description for Book 0009",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book9.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book9.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8a"
+  },
+  "isbn": "ISBN_0010",
+  "title": "Book 0010",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "HORROR",
+  "description": "Description for Book 0010",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book10.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book10.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8b"
+  },
+  "isbn": "ISBN_0011",
+  "title": "Book 0011",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "HORROR",
+  "description": "Description for Book 0011",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book11.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book11.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8c"
+  },
+  "isbn": "ISBN_0012",
+  "title": "Book 0012",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "HORROR",
+  "description": "Description for Book 0012",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book12.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book12.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8d"
+  },
+  "isbn": "ISBN_0013",
+  "title": "Book 0013",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "THRILLER",
+  "description": "Description for Book 0013",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book13.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book13.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8e"
+  },
+  "isbn": "ISBN_0014",
+  "title": "Book 0014",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "THRILLER",
+  "description": "Description for Book 0014",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book14.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book14.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d8f"
+  },
+  "isbn": "ISBN_0015",
+  "title": "Book 0015",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "THRILLER",
+  "description": "Description for Book 0015",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book15.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book15.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d90"
+  },
+  "isbn": "ISBN_0016",
+  "title": "Book 0016",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "MYSTERY",
+  "description": "Description for Book 0016",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book16.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book16.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d91"
+  },
+  "isbn": "ISBN_0017",
+  "title": "Book 0017",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "MYSTERY",
+  "description": "Description for Book 0017",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book17.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book17.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d92"
+  },
+  "isbn": "ISBN_0018",
+  "title": "Book 0018",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "MYSTERY",
+  "description": "Description for Book 0018",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book18.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book18.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d93"
+  },
+  "isbn": "ISBN_0019",
+  "title": "Book 0019",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "ROMANCE",
+  "description": "Description for Book 0019",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book19.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book19.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d94"
+  },
+  "isbn": "ISBN_0020",
+  "title": "Book 0020",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "ROMANCE",
+  "description": "Description for Book 0020",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book20.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book20.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d95"
+  },
+  "isbn": "ISBN_0021",
+  "title": "Book 0021",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "ROMANCE",
+  "description": "Description for Book 0021",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book21.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book21.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d96"
+  },
+  "isbn": "ISBN_0022",
+  "title": "Book 0022",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "SCIENCE FICTION",
+  "description": "Description for Book 0022",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book22.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book22.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d97"
+  },
+  "isbn": "ISBN_0023",
+  "title": "Book 0023",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "SCIENCE FICTION",
+  "description": "Description for Book 0023",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book23.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book23.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d98"
+  },
+  "isbn": "ISBN_0024",
+  "title": "Book 0024",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "SCIENCE FICTION",
+  "description": "Description for Book 0024",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book24.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book24.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d99"
+  },
+  "isbn": "ISBN_0025",
+  "title": "Book 0025",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "FANTASY",
+  "description": "Description for Book 0025",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book25.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book25.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d9a"
+  },
+  "isbn": "ISBN_0026",
+  "title": "Book 0026",
+  "authorId": "66c86c3da8c179a900e98d76",
+  "genre": "FANTASY",
+  "description": "Description for Book 0026",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book26.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book26.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d9b"
+  },
+  "isbn": "ISBN_0027",
+  "title": "Book 0027",
+  "authorId": "66c86c3da8c179a900e98d77",
+  "genre": "FANTASY",
+  "description": "Description for Book 0027",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book27.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book27.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d9c"
+  },
+  "isbn": "ISBN_0028",
+  "title": "Book 0028",
+  "authorId": "66c86c3da8c179a900e98d78",
+  "genre": "NON-FICTION",
+  "description": "Description for Book 0028",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book28.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book28.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d9d"
+  },
+  "isbn": "ISBN_0029",
+  "title": "Book 0029",
+  "authorId": "66c86c3da8c179a900e98d79",
+  "genre": "NON-FICTION",
+  "description": "Description for Book 0029",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book29.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book29.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c870c0a8c179a900e98d9e"
+  },
+  "isbn": "ISBN_0030",
+  "title": "Book 0030",
+  "authorId": "66c86c3da8c179a900e98d7a",
+  "genre": "NON-FICTION",
+  "description": "Description for Book 0030",
+  "isPremium": false,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads/book-cover/BOOKCOVER-Book30.jpg",
+  "pdfUrl": "uploads/book-pdf/BOOKPDF-Book30.pdf",
+  "createdAt": "2024-08-19T17:10:20.882Z",
+  "updatedAt": "2024-08-19T17:10:20.882Z",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c9ca3a813dc3516af07a5e"
+  },
+  "isbn": "kwhek",
+  "title": "sdfk",
+  "authorId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "genre": "LITERATURE",
+  "description": "weiuh",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads\\book-cover\\COVERIMAGE-1724500538741.jpeg",
+  "pdfUrl": "uploads\\book-pdf\\PDF-1724500538743.pdf",
+  "suspended": false,
+  "createdAt": {
+    "$date": "2024-08-24T11:55:38.764Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T11:55:38.764Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca50cf4380425d8cf60fd5"
+  },
+  "isbn": "fsdlkj",
+  "title": "xckjh",
+  "authorId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "genre": "MYSTERY",
+  "description": "asljas",
+  "isPremium": true,
+  "stock": 0,
+  "avgRating": 0,
+  "ratingsCount": 0,
+  "coverImageUrl": "uploads\\book-cover\\COVERIMAGE-1724534991357.png",
+  "pdfUrl": "uploads\\book-pdf\\PDF-1724534991364.pdf",
+  "suspended": false,
+  "createdAt": {
+    "$date": "2024-08-24T21:29:51.377Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T21:29:51.377Z"
+  },
+  "__v": 0
+}]

@@ -1,36 +1,81 @@
 const prefix = "http://localhost:4000/api";
 
+export const fetchWithToken = async (
+    url: string,
+    method: string,
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    body?: any
+) => {
+    const token = localStorage.getItem("authToken");
+
+    const response = await fetch(url, {
+        method,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: body ? JSON.stringify(body) : undefined,
+    });
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+};
+
 export default {
-  // User Login
-  readerLogin: `${prefix}/user/login-reader`,
-  authorLogin: `${prefix}/user/login-author`,
-  adminLogin: `${prefix}/user/login-admin`,
+    // User Login
+    readerLogin: `${prefix}/user/login-reader`,
+    authorLogin: `${prefix}/user/login-author`,
+    adminLogin: `${prefix}/user/login-admin`,
 
-  // User Registration
-  readerRegister: `${prefix}/user/register-reader`,
-  authorRegister: `${prefix}/user/register-author`,
-  adminRegister: `${prefix}/user/register-admin`,
+    // User Registration
+    readerRegister: `${prefix}/user/register-reader`,
+    authorRegister: `${prefix}/user/register-author`,
+    adminRegister: `${prefix}/user/register-admin`,
 
-  // User Profile Management
-  changeFullName: `${prefix}/user/change-fullname`,
-  changePassword: `${prefix}/user/change-password`,
-  changeProfileImage: `${prefix}/user/change-profile-image`,
+    // User Profile Management
+    changeFullName: `${prefix}/user/change-fullname`,
+    changePassword: `${prefix}/user/change-password`,
+    changeProfileImage: `${prefix}/user/change-profile-image`,
 
-  // Membership Management
-  addMembership: `${prefix}/user/add-membership`,
-  removeMembership: `${prefix}/user/remove-membership`,
+    // Membership Management
+    addMembership: `${prefix}/user/add-membership`,
+    removeMembership: `${prefix}/user/remove-membership`,
 
-  // Suspension Management
-  suspendUser: `${prefix}/user/suspend-user`,
-  removeSuspension: `${prefix}/user/remove-suspension`,
+    // Get user
+    getAllUsers: `${prefix}/user/get-all-users`,
+    getUserById: (userId: string) => `${prefix}/user/get-user-by-id/${userId}`,
+    getUserByRole: (role: string) => `${prefix}/user/get-user-by-role/${role}`,
 
-  // Balance Management
-  addBalance: `${prefix}/user/add-balance`,
+    // Suspension Management
+    suspendUser: (userId: string) => `${prefix}/user/suspend-user/${userId}`,
+    removeSuspension: (userId: string) =>
+        `${prefix}/user/remove-suspension/${userId}`,
 
-  // Books
-  getBooksBrief: `${prefix}/book/get-books-brief`,
-  getBookDetails: (bookId: string) => `${prefix}/book/get-book-details/${bookId}`,
+    // Balance Management
+    addBalance: `${prefix}/user/add-balance`,
 
-  // Ratings
-  getRatings: (bookId: string) => `${prefix}/rating/get-ratings/${bookId}`,
+    // Books
+    getBooksBrief: `${prefix}/book/get-books-brief`,
+    getBookDetails: (bookId: string) =>
+        `${prefix}/book/get-book-details/${bookId}`,
+
+    // Reservations
+    getAllReservations: `${prefix}/reservation/get-all-reservations`,
+    getReservationById: (reservationId: string) =>
+        `${prefix}/reservation/get-reservation-by-id/${reservationId}`,
+    createReservation: (bookId: string) =>
+        `${prefix}/reservation/create-reservation/${bookId}`,
+    updateReservationStatus: (reservationId: string) =>
+        `${prefix}/reservation/update-reservation-status/${reservationId}`,
+    deleteReservation: (reservationId: string) =>
+        `${prefix}/reservation/delete-reservation/${reservationId}`,
+
+    // Ratings
+    getRatings: (bookId: string) => `${prefix}/rating/get-ratings/${bookId}`,
+
+    // Ratings
+    getAllPayments: `${prefix}/payment/get-all-payments/`,
 };

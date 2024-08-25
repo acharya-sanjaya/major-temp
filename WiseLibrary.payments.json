@@ -1,0 +1,147 @@
+[{
+  "_id": {
+    "$oid": "66ca59594c167c7958451ca7"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 200,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:06:17.042Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:06:17.043Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:06:17.043Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca595e4c167c7958451cab"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 100,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:06:22.159Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:06:22.159Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:06:22.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca59614c167c7958451caf"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 300,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:06:25.360Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:06:25.361Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:06:25.361Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca59634c167c7958451cb3"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 400,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:06:27.823Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:06:27.823Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:06:27.823Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca5b0b599ac093512203d1"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 200,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:13:31.756Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:13:31.761Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:13:31.761Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca5b0d599ac093512203d6"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 200,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:13:33.650Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:13:33.651Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:13:33.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca5b14599ac093512203dd"
+  },
+  "userId": {
+    "$oid": "66c86c3da8c179a900e98d7b"
+  },
+  "amount": 100,
+  "paymentMethod": "wallet",
+  "status": "completed",
+  "paymentDate": {
+    "$date": "2024-08-24T22:13:40.495Z"
+  },
+  "createdAt": {
+    "$date": "2024-08-24T22:13:40.496Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T22:13:40.496Z"
+  },
+  "__v": 0
+}]

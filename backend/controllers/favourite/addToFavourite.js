@@ -7,9 +7,9 @@ const addToFavourite = async (req, res) => {
 
   try {
     // Check if the user is a reader
-    if (req.user.role !== "reader") {
-      return res.status(403).json({message: "Only readers can add books to favourites"});
-    }
+    // if (req.user.role !== "reader") {
+    //   return res.status(403).json({message: "Only readers can add books to favourites"});
+    // }
 
     // Find the book by ID
     const book = await Book.findById(bookId);
