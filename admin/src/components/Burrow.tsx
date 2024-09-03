@@ -65,7 +65,7 @@ const Burrows = () => {
                                     >
                                         <td className="p-2">
                                             <img
-                                                src={burrow.coverImage}
+                                                src={`http://localhost:4000/${burrow.coverImage}`}
                                                 alt={burrow.bookTitle}
                                                 className="w-16 h-24 object-cover"
                                             />

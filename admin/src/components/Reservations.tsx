@@ -57,7 +57,7 @@ const Reservations = () => {
                                 >
                                     <td className="p-2">
                                         <img
-                                            src={reservation.coverImage}
+                                            src={`http://localhost:4000/${reservation.coverImage}`}
                                             alt={reservation.bookTitle}
                                             className="w-16 h-16 object-cover"
                                         />
