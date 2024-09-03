@@ -2,6 +2,11 @@ const Reservation = require("../../models/reservation.js");
 
 const getAllReservations = async (req, res) => {
   try {
+    // // Ensure only admins can access this route
+    // if (req.user.role !== "admin") {
+    //   return res.status(403).json({message: "Access denied. Admins only."});
+    // }
+
     // Find all reservations in the system
     const reservations = await Reservation.find()
       .populate("userId")
