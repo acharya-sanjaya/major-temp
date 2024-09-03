@@ -2,15 +2,13 @@ const Reservation = require("../../models/reservation.js");
 
 const getAllReservations = async (req, res) => {
   try {
-    // // Ensure only admins can access this route
-    // if (req.user.role !== "admin") {
-    //   return res.status(403).json({message: "Access denied. Admins only."});
-    // }
-
     // Find all reservations in the system
     const reservations = await Reservation.find()
       .populate("userId")
-      .populate("bookId")
+      .populate({
+        path: "bookId",
+        select: "title coverImageUrl",
+      })
       .sort({createdAt: -1});
 
     if (!reservations.length) {
@@ -23,7 +21,7 @@ const getAllReservations = async (req, res) => {
       userName: reservation.userId.fullName,
       bookId: reservation.bookId._id,
       bookTitle: reservation.bookId.title,
-      coverImage: reservation.bookId.coverImage,
+      coverImage: reservation.bookId.coverImageUrl,
       reservedQuantity: reservation.quantity,
       status: reservation.status,
       reservedDate: reservation.createdAt,
